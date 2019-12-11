@@ -2,7 +2,7 @@
 layout:     post
 title:      如何通过mybatis返回oracle自增长id
 subtitle:   如何通过mybatis返回oracle自增长id
-date:       2017-05-22
+date:       2019-04-04
 author:     漆黑的夜漫天的星
 header-img: img/home-bg-o.jpg
 catalog: true
