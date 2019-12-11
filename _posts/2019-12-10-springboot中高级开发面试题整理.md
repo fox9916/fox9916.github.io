@@ -88,6 +88,7 @@ Spring Boot官方的启动器都是以spring-boot-starter-命名的，代表了�
 </parent>
 ```
 - 导入spring-boot-dependencies项目依赖  
+
 ```
 <dependencyManagement>
     <dependencies>
@@ -99,14 +100,16 @@ Spring Boot官方的启动器都是以spring-boot-starter-命名的，代表了�
             <scope>import</scope>
         </dependency>
     <dependencies>
-</dependencyManagement>
+</dependencyManagement>   
+
 ```
-ring Boot依赖注意点： 属性覆盖只对继承有效  
+spring Boot依赖注意点： 属性覆盖只对继承有效  
 Spring Boot依赖包里面的组件的版本都是和当前Spring Boot绑定的，如果要修改里面组件的版本，只需要添加如下属性覆盖即可，但这种方式只对继承有效，导入的方式无效。  
 ```
 <properties>
         <slf4j.version>1.7.25<slf4j.version>
-    </properties>
+    </properties>  
+    
 ```
 如果导入的方式要实现版本的升级，达到上面的效果，这样也可以做到，把要升级的组件依赖放到Spring Boot之前。  
 需要注意，要修改Spring Boot的依赖组件版本可能会造成不兼容的问题。    
