@@ -79,15 +79,17 @@ Starters可以理解为启动器，它包含了一系列可以集成到应用里
 Spring Boot官方的启动器都是以spring-boot-starter-命名的，代表了一个特定的应用类型。第三方的启动器不能以spring-boot开头命名，它们都被Spring Boot官方保留。一般一个第三方的应该这样命名，像mybatis的mybatis-spring-boot-starter。  
 
 #### 11. 开启springboot特性的方式有哪些？
-- 继承spring-boot-starter-parent项目  
+继承spring-boot-starter-parent项目    
+
 ```
 <parent>  
 <groupId>org.springframework.boot</groupId>   
 <artifactId>spring-boot-starter-parent</artifactId>
 <version>1.5.6.RELEASE</version>
-</parent>
+</parent>  
+
 ```
-- 导入spring-boot-dependencies项目依赖  
+导入spring-boot-dependencies项目依赖  
 
 ```
 <dependencyManagement>
@@ -105,11 +107,13 @@ Spring Boot官方的启动器都是以spring-boot-starter-命名的，代表了�
 ```
 spring Boot依赖注意点： 属性覆盖只对继承有效  
 Spring Boot依赖包里面的组件的版本都是和当前Spring Boot绑定的，如果要修改里面组件的版本，只需要添加如下属性覆盖即可，但这种方式只对继承有效，导入的方式无效。  
+
+
 ```
 <properties>
         <slf4j.version>1.7.25<slf4j.version>
     </properties>  
-    
+
 ```
 如果导入的方式要实现版本的升级，达到上面的效果，这样也可以做到，把要升级的组件依赖放到Spring Boot之前。  
 需要注意，要修改Spring Boot的依赖组件版本可能会造成不兼容的问题。    
