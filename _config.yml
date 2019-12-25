@@ -92,7 +92,7 @@ service-worker: true
 friends: [
     {
         title: "GitHub·fox9916",
-        href: "https://fox9916.github.io/"
+        href: "https://fox9916.github.io"
     },{
         title: "CSDN·漆黑的夜漫天的星",
         href: "https://blog.csdn.net/fox9916"
